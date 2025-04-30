@@ -1,32 +1,75 @@
-# Exp.No:21  
-## Constructors - Parameterized Constructor
 
----
+# Exp.No:21  
+## Constructors -Write a python program using class to perform addition of two numbers using parameterised constructor.
 
 ### AIM  
-To write a Python code to create a class for a person with a parameterized constructor, which will take the `name` and `userid` of the person as parameters and print the `userid` of the person.
-
----
+To write a Python program using a class with a parameterized constructor to perform the addition of two numbers.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Define a `person` class.  
-3. The `person` class should have a parameterized `__init__` method that accepts two parameters: `name` and `userid`.  
-4. Inside the `__init__` method, assign the `name` to `self.name` and the `userid` to `self.userid`.  
-5. Print the `self.userid`.  
-6. Prompt the user to enter their `name` (string) and `userid`.  
-7. Create an instance `s1` of the `person` class by passing the entered `name` and `userid` to the constructor.  
-8. Terminate the program.
+1.Define a class named Addition.
 
----
+2.Declare three attributes inside the class: first, second, and answer, initializing them to 0.
+
+3.Create a parameterized constructor __init__() that accepts two arguments and assigns them to first and second4..
+
+4.Create a calculate() method that adds the two numbers and stores the result in answer.
+
+5.Create a display() method that prints the values of first, second, and answer.
+
+6.Take two numbers as input from the user.
+
+7.Create an object of the Addition class by passing the two numbers to the constructor.
+
+8.Call the calculate() method to perform the addition.
+
+9.Call the display() method to show the result.
+
 
 ### PROGRAM
 
 ```
+# Reg.No-212223020018
+# Name-Mohamed Jafin S
+class Addition:
+    first = 0
+    second = 0
+    answer = 0
+     
+    # parameterized constructor
+    def __init__(self, f, s):
+        self.first = f
+        self.second = s
+     
+    def display(self):
+        print("First number = " + str(self.first))
+        print("Second number = " + str(self.second))
+        print("Addition of two numbers = " + str(self.answer))
+ 
+    def calculate(self):
+        self.answer = self.first + self.second
+ 
+# creating object of the class
+# this will invoke parameterized constructor
+x=int(input())
+y=int(input())
+
+obj = Addition(x,y)
+ 
+# perform Addition
+obj.calculate()
+ 
+# display result
+obj.display()
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/f4ccacc5-ecf9-4b6e-b83e-3ba5de83940a)
 
 ### RESULT
+The program successfully accepts two numbers from the user.
+
+It calculates their sum using a class with a parameterized constructor.
+
+It displays the first number, second number, and their addition result.
